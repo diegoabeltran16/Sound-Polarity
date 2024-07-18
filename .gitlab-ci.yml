@@ -13,6 +13,7 @@ include:
 # The stages defined for the pipeline
 stages:
   - test
+  - sync
 
 # SAST Job
 # This job performs Static Application Security Testing to identify security vulnerabilities in the code.
@@ -23,6 +24,7 @@ sast:
     - echo "Running SAST"
   variables:
     SAST_EXCLUDED_PATHS: 'tests/*,docs/*'  # Exclude certain paths from being scanned
+    include:- template: Security/SAST.gitlab-ci.yml
 
 # Secret Detection Job
 # This job scans the repository for any hardcoded secrets, such as passwords or API keys, that should not be in the codebase.
@@ -47,6 +49,23 @@ container_scanning:
   stage: test
   script: # Mandatory script keyword to make the job valid
     - echo "Running Container Scanning"
+
+
+  
+# Sync job
+sync_repos:
+  stage: sync
+  script:
+    - ./sync_repos.sh
+  only:
+    - master  # Adjust this to run on specific branches as needed
+  variables:
+    GITHUB_TOKEN: $GITHUB_TOKEN
+    GITHUB_REPO: $GITHUB_REPO
+    GITLAB_TOKEN: $GITLAB_TOKEN
+    GITLAB_REPO: $CI_PROJECT_PATH
+    GIT_STRATEGY: fetch
+
 
 # Documentation:
 # 1. **Stages**: Defines the different phases of the CI/CD pipeline. In this script, there is a single 'test' stage where all security scans are performed.
