@@ -1,5 +1,5 @@
 # Sound-Polarity
-
+A tool for music composition
 
 
 ## Getting started
