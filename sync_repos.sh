@@ -45,8 +45,9 @@ git fetch gitlab || echo "Failed to fetch from GitLab. Check the repository URL 
 echo "Checking for local changes..."
 git status
 if ! git diff-index --quiet HEAD --; then
-  echo "Committing local changes..."
+  echo "Staging all changes..."
   git add .
+  echo "Committing local changes..."
   git commit -m "Automated commit by sync script"
 fi
 
