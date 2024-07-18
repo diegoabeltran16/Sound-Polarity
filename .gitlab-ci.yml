@@ -3,6 +3,13 @@
 # This configuration file sets up various security scans in the GitLab CI/CD pipeline.
 # It includes stages for SAST, Secret Detection, Dependency Scanning, and Container Scanning.
 
+# Global include of predefined templates
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml
+
 # The stages defined for the pipeline
 stages:
   - test
@@ -16,8 +23,6 @@ sast:
     - echo "Running SAST"
   variables:
     SAST_EXCLUDED_PATHS: 'tests/*,docs/*'  # Exclude certain paths from being scanned
-  include:
-    - template: Security/SAST.gitlab-ci.yml
 
 # Secret Detection Job
 # This job scans the repository for any hardcoded secrets, such as passwords or API keys, that should not be in the codebase.
@@ -26,8 +31,6 @@ secret_detection:
   stage: test
   script: # Mandatory script keyword to make the job valid
     - echo "Running Secret Detection"
-  include:
-    - template: Security/Secret-Detection.gitlab-ci.yml
 
 # Dependency Scanning Job
 # This job scans the project dependencies for known vulnerabilities.
@@ -36,8 +39,6 @@ dependency_scanning:
   stage: test
   script: # Mandatory script keyword to make the job valid
     - echo "Running Dependency Scanning"
-  include:
-    - template: Security/Dependency-Scanning.gitlab-ci.yml
 
 # Container Scanning Job
 # This job scans container images for known vulnerabilities.
@@ -46,24 +47,18 @@ container_scanning:
   stage: test
   script: # Mandatory script keyword to make the job valid
     - echo "Running Container Scanning"
-  include:
-    - template: Security/Container-Scanning.gitlab-ci.yml
 
 # Documentation:
 # 1. **Stages**: Defines the different phases of the CI/CD pipeline. In this script, there is a single 'test' stage where all security scans are performed.
 # 2. **SAST Job**:
 #    - **Purpose**: To perform static analysis of the source code to identify security vulnerabilities.
 #    - **Customization**: Excludes specific paths (`tests/*,docs/*`) from being scanned using the `SAST_EXCLUDED_PATHS` variable.
-#    - **Template**: Utilizes the predefined `Security/SAST.gitlab-ci.yml` template from GitLab.
 # 3. **Secret Detection Job**:
 #    - **Purpose**: To detect hardcoded secrets in the codebase that could pose a security risk.
-#    - **Template**: Utilizes the predefined `Security/Secret-Detection.gitlab-ci.yml` template from GitLab.
 # 4. **Dependency Scanning Job**:
 #    - **Purpose**: To identify known vulnerabilities in the project's dependencies.
-#    - **Template**: Utilizes the predefined `Security/Dependency-Scanning.gitlab-ci.yml` template from GitLab.
 # 5. **Container Scanning Job**:
 #    - **Purpose**: To scan container images for vulnerabilities.
-#    - **Template**: Utilizes the predefined `Security/Container-Scanning.gitlab-ci.yml` template from GitLab.
 
 # Notes:
 # - The `include` keyword is used to incorporate GitLab's predefined security templates, which contain the necessary configurations for each type of security scan.
