@@ -12,6 +12,8 @@ stages:
 # The job is configured using GitLab's predefined SAST template.
 sast:
   stage: test
+  script: # Mandatory script keyword to make the job valid
+    - echo "Running SAST"
   variables:
     SAST_EXCLUDED_PATHS: 'tests/*,docs/*'  # Exclude certain paths from being scanned
   include:
@@ -22,6 +24,8 @@ sast:
 # The job uses GitLab's predefined Secret Detection template.
 secret_detection:
   stage: test
+  script: # Mandatory script keyword to make the job valid
+    - echo "Running Secret Detection"
   include:
     - template: Security/Secret-Detection.gitlab-ci.yml
 
@@ -30,6 +34,8 @@ secret_detection:
 # It uses GitLab's predefined Dependency Scanning template to identify issues in the libraries and packages used by the project.
 dependency_scanning:
   stage: test
+  script: # Mandatory script keyword to make the job valid
+    - echo "Running Dependency Scanning"
   include:
     - template: Security/Dependency-Scanning.gitlab-ci.yml
 
@@ -38,6 +44,8 @@ dependency_scanning:
 # It is configured using GitLab's predefined Container Scanning template.
 container_scanning:
   stage: test
+  script: # Mandatory script keyword to make the job valid
+    - echo "Running Container Scanning"
   include:
     - template: Security/Container-Scanning.gitlab-ci.yml
 
@@ -60,7 +68,7 @@ container_scanning:
 # Notes:
 # - The `include` keyword is used to incorporate GitLab's predefined security templates, which contain the necessary configurations for each type of security scan.
 # - Environment variables can be set to customize the behavior of the scans. In this example, the `SAST_EXCLUDED_PATHS` variable is used to exclude certain directories from the SAST scan.
-# - Further customization can be achieved by setting additional variables or by overriding specific settings in the included templates.
+# - Further customization can be achieved by setting additional variables or by adding specific configuration within your `.gitlab-ci.yml` file.
 
 # For more information on customizing the settings, refer to the following GitLab documentation:
 # - SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
