@@ -55,7 +55,7 @@ echo "Checking for local changes..."
 git status
 if ! git diff-index --quiet HEAD --; then
   echo "Staging all changes..."
-  git add .
+  git add -A  # Add all changes (tracked, untracked, and deletions)
   echo "Committing local changes..."
   git commit -m "Automated commit by sync script"
 fi
