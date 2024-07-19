@@ -4,6 +4,15 @@
 set -e
 set -x  # Enable debugging output
 
+# Set environment variables
+export GITHUB_TOKEN=your_github_token
+export GITHUB_REPO=github.com/diegoabeltran16/Sound-Polarity.git
+export GITLAB_TOKEN=your_github_token
+export GITLAB_REPO=gitlab.com/music9771528/sound-polarity.git
+
+# Configure Git credential helper to store credentials permanently
+git config --global credential.helper store
+
 # Print environment variables for debugging
 echo "GITHUB_REPO: ${GITHUB_REPO}"
 echo "GITLAB_REPO: ${GITLAB_REPO}"
