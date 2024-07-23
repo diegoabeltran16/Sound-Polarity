@@ -536,3 +536,354 @@ if __name__ == '__main__':
 ```
 
 
+## Wireframes
+
+**Wireframe 1: Home Page / Input Form**
+This page allows users to input the tonic note and select a scale type.
+
+```
+---------------------------------------
+| Sound-Polarity                      |
+---------------------------------------
+| Input the tonic note: [      ]      |
+---------------------------------------
+| Select the scale type:              |
+| [Major] [Minor]                     |
+---------------------------------------
+| [Generate]                          |
+---------------------------------------
+
+```
+
+**Wireframe 2: Display Results**
+This page shows the generated scales, chords, and I Ching mappings in an organized format.
+
+```
+---------------------------------------
+| Sound-Polarity                      |
+---------------------------------------
+| Generated Results                   |
+---------------------------------------
+| Modal Scales:                       |
+| - Ionian: [notes]                   |
+| - Dorian: [notes]                   |
+| - Phrygian: [notes]                 |
+| - Lydian: [notes]                   |
+| - Mixolydian: [notes]               |
+| - Aeolian: [notes]                  |
+| - Locrian: [notes]                  |
+---------------------------------------
+| Basic Chords:                       |
+| - Major triad: [notes]              |
+| - Minor triad: [notes]              |
+| - Diminished triad: [notes]         |
+| - Augmented triad: [notes]          |
+---------------------------------------
+| Seventh Chords:                     |
+| - Major 7th: [notes]                |
+| - Minor 7th: [notes]                |
+| - Dominant 7th: [notes]             |
+| - Half-diminished 7th: [notes]      |
+| - Fully diminished 7th: [notes]     |
+---------------------------------------
+| Extended Chords:                    |
+| - 9th: [notes]                      |
+| - 11th: [notes]                     |
+| - 13th: [notes]                     |
+---------------------------------------
+| I Ching Mappings:                   |
+| - Hexagram 1: [description]         |
+| - Hexagram 2: [description]         |
+| - ...                               |
+---------------------------------------
+| [Export Results]                    |
+---------------------------------------
+
+```
+
+
+**Wireframe 3: Export Confirmation**
+This page confirms that the results have been successfully exported.
+
+```
+---------------------------------------
+| Sound-Polarity                      |
+---------------------------------------
+| Results Exported Successfully!      |
+---------------------------------------
+| Your results have been saved to:    |
+| [filename.txt]                      |
+---------------------------------------
+| [Return to Home]                    |
+---------------------------------------
+
+```
+
+
+**Wireframe 4: Admin Interface for Database Management**
+This page allows administrators to manage the database of musical terms.
+
+```
+---------------------------------------
+| Sound-Polarity Admin                |
+---------------------------------------
+| Manage Musical Terms                |
+---------------------------------------
+| [Add New Term] [Update Term]        |
+| [Delete Term] [View All Terms]      |
+---------------------------------------
+| Add New Term                        |
+| Term: [        ]                    |
+| Category: [        ]                |
+| [Save]                              |
+---------------------------------------
+| View All Terms                      |
+| - Term 1 (Category)                 |
+| - Term 2 (Category)                 |
+| - Term 3 (Category)                 |
+---------------------------------------
+
+```
+
+## **Plan for development**
+Develop the Sound-Polarity project using a transformative approach inspired by the Yin-Yang concept, we will be structuring the development in cycles of pre-co-requisite programming blocks, moving from the simplest to the most complex. 
+Here’s a structured development plan divided into Alpha and Beta prototypes, each building upon the previous cycle
+
+-**Cycle 1: Foundation and Basic Features**
+Basic setup, scale and chord generation, initial UI.
+
+- **Alpha Prototype 1.1:** Initial Setup and Basic Input
+- Tasks:
+- [ ] Set up the development environment.
+- [ ] Create a basic Python project structure.
+- [ ] Implement user input for tonic note and scale type.
+- [ ] Develop basic functions for scale generation (Ionian, Dorian, etc.).
+- [ ] Basic user interface for input and displaying generated scales.
+
+
+- **Beta Prototype 1.2: Basic Chord Generation**
+- Tasks:
+- [ ] Extend scale generation to include all seven modes.
+- [ ] Implement functions for generating basic triads (major, minor, diminished, augmented).
+- [ ] Enhance UI to display generated chords alongside scales.
+- [ ] Conduct initial user testing for feedback on input and display functionalities.
+
+
+-**Cycle 2: Advanced Features and I Ching Integration**
+Advanced chords, I Ching integration, export functionality.
+
+- **Alpha Prototype 2.1:** Seventh and Extended Chords
+- Tasks:
+- [ ] Implement functions for generating seventh chords (major 7th, minor 7th, dominant 7th, etc.).
+- [ ] Develop functions for extended chords (9th, 11th, 13th).
+- [ ] Enhance UI to display seventh and extended chords.
+- [ ] Add export functionality to save generated scales and chords to a text file.
+
+
+- **Beta Prototype 2.2: I Ching Integration**
+- Tasks:
+- [ ] Implement binary mapping of scales and chords to I Ching trigrams and hexagrams.
+- [ ] Develop functions to convert musical elements into binary forms corresponding to I Ching symbols.
+- [ ] Enhance UI to display I Ching mappings with emotional and harmonic attributes.
+- [ ] Conduct user testing to gather feedback on I Ching integration.
+
+
+-**Cycle 3:** Generative AI and Harmonic Progressions
+Generative AI for harmonic progressions, advanced user interaction.
+
+- **Alpha Prototype 3.1:** Generative AI Integration
+- Tasks:
+- [ ] Set up OpenAI API for generative AI.
+- [ ] Implement functions to generate harmonic progressions using AI (GPT-3).
+- [ ] Enhance UI to provide options for generating harmonic progressions.
+- [ ] Initial user testing for feedback on AI-generated progressions.
+
+
+- **Beta Prototype 3.2:** Advanced AI and User Interaction
+- Tasks:
+- [ ] Refine AI-generated harmonic progressions based on user feedback.
+- [ ] Implement features for saving and loading user-generated harmonic progressions.
+- [ ] Conduct extensive user testing to ensure the generative AI produces musically appealing results.
+- [ ] Optimize performance and usability based on feedback.
+
+
+-**Cycle 4:** Comprehensive Testing and Finalization
+Comprehensive testing, optimization, finalization, and deployment.
+
+- **Alpha Prototype 4.1:** Comprehensive Testing
+- Tasks:
+- [ ] Conduct thorough testing of all features (unit tests, integration tests).
+- [ ] Ensure compatibility across different devices and operating systems.
+- [ ] Optimize code for performance and scalability.
+- [ ] Prepare documentation and user guides.
+
+
+- **Beta Prototype 4.2:** Finalization and Deployment
+- Tasks:
+- [ ] Finalize UI/UX based on comprehensive feedback.
+- [ ] Ensure security measures are in place (authentication, data protection).
+- [ ] Conduct final user acceptance testing (UAT).
+- [ ] Deploy the application and monitor initial user interactions for any issues.
+
+
+## Project Structure
+
+```
+Sound-Polarity/
+├── cycle_1_foundation/
+│   ├── alpha_1_1/
+│   │   ├── main.py
+│   │   ├── scale_generator.py
+│   │   ├── ui/
+│   │   │   ├── input_form.py
+│   │   │   └── display_scales.py
+│   │   ├── tests/
+│   │   │   └── test_scale_generator.py
+│   │   └── requirements.txt
+│   └── beta_1_2/
+│       ├── main.py
+│       ├── scale_generator.py
+│       ├── chord_generator.py
+│       ├── ui/
+│       │   ├── input_form.py
+│       │   └── display_results.py
+│       ├── tests/
+│       │   └── test_chord_generator.py
+│       └── requirements.txt
+├── cycle_2_advanced/
+│   ├── alpha_2_1/
+│   │   ├── main.py
+│   │   ├── scale_generator.py
+│   │   ├── chord_generator.py
+│   │   ├── extended_chords.py
+│   │   ├── ui/
+│   │   │   └── display_extended_chords.py
+│   │   ├── export_results.py
+│   │   ├── tests/
+│   │   │   └── test_extended_chords.py
+│   │   └── requirements.txt
+│   └── beta_2_2/
+│       ├── main.py
+│       ├── scale_generator.py
+│       ├── chord_generator.py
+│       ├── extended_chords.py
+│       ├── i_ching_integration.py
+│       ├── ui/
+│       │   └── display_i_ching.py
+│       ├── export_results.py
+│       ├── tests/
+│       │   └── test_i_ching_integration.py
+│       └── requirements.txt
+├── cycle_3_ai/
+│   ├── alpha_3_1/
+│   │   ├── main.py
+│   │   ├── ai_integration.py
+│   │   ├── ui/
+│   │   │   └── display_ai_progressions.py
+│   │   ├── tests/
+│   │   │   └── test_ai_integration.py
+│   │   └── requirements.txt
+│   └── beta_3_2/
+│       ├── main.py
+│       ├── ai_integration.py
+│       ├── ui/
+│       │   └── display_advanced_ai.py
+│       ├── tests/
+│       │   └── test_advanced_ai.py
+│       └── requirements.txt
+├── cycle_4_final/
+│   ├── alpha_4_1/
+│   │   ├── main.py
+│   │   ├── full_integration.py
+│   │   ├── ui/
+│   │   │   └── final_ui.py
+│   │   ├── tests/
+│   │   │   └── test_full_integration.py
+│   │   └── requirements.txt
+│   └── beta_4_2/
+│       ├── main.py
+│       ├── full_integration.py
+│       ├── ui/
+│       │   └── final_ui.py
+│       ├── tests/
+│       │   └── test_final.py
+│       └── requirements.txt
+├── docs/
+│   ├── README.md
+│   ├── user_guide.md
+│   ├── developer_guide.md
+│   └── CHANGELOG.md
+└── LICENSE
+
+```
+
+- **Cycle Folders (cycle_1_foundation, cycle_2_advanced, etc.):** Each cycle contains its own set of subfolders for alpha and beta prototypes. This allows you to work on and test features incrementally.
+- **Alpha and Beta Prototypes (alpha_1_1, beta_1_2, etc.):** Separate folders for each prototype stage within a cycle. This keeps versions distinct and helps track progress.
+- **Modules (main.py, scale_generator.py, etc.):** Core functionality files, organized by feature (scale generation, chord generation, AI integration, etc.).
+- **User Interface (ui/):** All UI-related code, ensuring a clean separation from the core logic.
+- **Tests (tests/):** Unit tests for each module, ensuring code reliability and facilitating testing at each stage.
+- **Documentation (docs/):** Comprehensive project documentation, including README, user guide, developer guide, and changelog.
+- **Requirements (requirements.txt):** Dependencies for each prototype stage, ensuring a consistent development environment.
+
+## Flowchart
+
+```
+Sound-Polarity Development Flow Chart
+
+Start
+  │
+  ├─ Cycle 1: Foundation and Basic Features
+  │    ├─ Alpha 1.1: Initial Setup and Basic Input
+  │    │    ├─ Set up development environment
+  │    │    ├─ Create project structure
+  │    │    ├─ Implement user input for tonic note and scale type
+  │    │    └─ Develop basic scale generation functions
+  │    │
+  │    └─ Beta 1.2: Basic Chord Generation
+  │         ├─ Extend scale generation to all seven modes
+  │         ├─ Implement basic triads generation
+  │         ├─ Enhance UI to display scales and chords
+  │         └─ Initial user testing and feedback
+  │
+  ├─ Cycle 2: Advanced Features and I Ching Integration
+  │    ├─ Alpha 2.1: Seventh and Extended Chords
+  │    │    ├─ Implement seventh chords generation
+  │    │    ├─ Develop extended chords functions
+  │    │    ├─ Enhance UI for extended chords
+  │    │    └─ Add export functionality
+  │    │
+  │    └─ Beta 2.2: I Ching Integration
+  │         ├─ Implement binary mapping to I Ching trigrams
+  │         ├─ Develop functions for binary conversion
+  │         ├─ Enhance UI for I Ching mappings
+  │         └─ User testing and feedback on I Ching integration
+  │
+  ├─ Cycle 3: Generative AI and Harmonic Progressions
+  │    ├─ Alpha 3.1: Generative AI Integration
+  │    │    ├─ Set up OpenAI API
+  │    │    ├─ Implement AI harmonic progression generation
+  │    │    ├─ Enhance UI for AI options
+  │    │    └─ Initial user testing on AI progressions
+  │    │
+  │    └─ Beta 3.2: Advanced AI and User Interaction
+  │         ├─ Refine AI-generated progressions
+  │         ├─ Implement saving/loading of progressions
+  │         ├─ Extensive user testing
+  │         └─ Optimize performance and usability
+  │
+  └─ Cycle 4: Comprehensive Testing and Finalization
+       ├─ Alpha 4.1: Comprehensive Testing
+       │    ├─ Thorough feature testing
+       │    ├─ Ensure cross-platform compatibility
+       │    ├─ Optimize code performance
+       │    └─ Prepare documentation
+       │
+       └─ Beta 4.2: Finalization and Deployment
+            ├─ Finalize UI/UX
+            ├─ Implement security measures
+            ├─ Final user acceptance testing
+            └─ Deploy and monitor
+
+End
+
+```
