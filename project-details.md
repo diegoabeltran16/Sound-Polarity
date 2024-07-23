@@ -10,59 +10,56 @@ The project encompasses the design and implementation of a comprehensive musical
 ### Specific Objectives
 
 - **Enable Quick and Intuitive Access to Musical Terms and Structures for Users**
-Provide a user-friendly interface that allows users to quickly search for and access musical scales and chords.
-Implementation: Develop a search functionality within the application where users can type in a term, and the application will return relevant musical terms and structures from the database.
+The objective is to provide a user-friendly interface that allows users to quickly search for and access musical scales and chords. To achieve this, the implementation will involve developing a robust search functionality within the application. Users will be able to type in a musical term, and the application will efficiently return relevant musical terms, scales, and chord structures from the database. This feature will be designed to ensure quick retrieval and display of information, enhancing the user experience by making it easy to find and utilize musical resources.
 
 - **Provide Specialty-Specific Term Lists**
-Offer curated lists of musical scales and chords specific to different categories (e.g., major scales, minor chords).
-Implementation: Organize the database of musical terms into categories based on types (scales, chords, etc.). Create a user interface where users can select a category to view the relevant terms.
+The objective is to offer curated lists of musical scales and chords specific to different categories (e.g., major scales, minor chords). To achieve this, the implementation will involve organizing the database of musical terms into categories based on types (scales, chords, etc.). Additionally, a user interface will be created where users can select a category to view the relevant terms.
 
 - **Allow for Easy Expansion and Updates to the Database**
-Ensure the database of musical terms can be easily expanded and updated without significant rework or downtime.
-Implementation: Set up a relational database with CRUD (Create, Read, Update, Delete) operations. Provide an admin interface or API endpoints to facilitate updates and maintain data integrity and consistency.
+The objective is to ensure the database of musical terms can be easily expanded and updated without significant rework or downtime. To achieve this, the implementation will involve setting up a relational database with CRUD (Create, Read, Update, Delete) operations. An admin interface or API endpoints will be provided to facilitate updates and maintain data integrity and consistency.
 
-- **Automatically Analyze and Organize New Information Provided by Users**
-Implement functionality to accept, analyze, and organize new musical terms submitted by users.
-Implementation: Use natural language processing (NLP) and rule-based systems to parse and understand new terms provided by users. Automatically categorize and tag new terms and update the database accordingly.
+- **Leverage Generative AI to Create Harmonic Progressions from Possible Scale and Chord Combinations**
+The objective is to use generative AI to automatically generate musically appealing harmonic progressions from the possible scales and chords provided by the user. By integrating advanced machine learning models, such as GPT-3, the application will analyze the input musical parameters and produce complex harmonic combinations. This feature will enhance the user's ability to explore and create rich musical compositions, blending theoretical knowledge with AI-driven creativity. The implementation involves generating the basic scales and chords from a given note and scale type, feeding this data into the generative AI model, and retrieving text-based harmonic progressions as output.
 
-- **Ensure the Bot is User-Friendly and Accessible**
-Design the application to be intuitive and accessible to all users, including those with disabilities.
-Implementation: Follow UX design principles to create an intuitive interface. Conduct user testing to gather feedback and make improvements. Ensure compliance with accessibility standards by incorporating features like screen reader compatibility, keyboard navigation, and appropriate color contrasts.
+- **Ensure the Application is User-Friendly and Accessible**
+The objective is to design the application to be intuitive and accessible to all users, including those with disabilities. To achieve this, the implementation will involve following UX design principles to create an intuitive interface. User testing will be conducted to gather feedback and make improvements. Compliance with accessibility standards will be ensured by incorporating features like screen reader compatibility, keyboard navigation, and appropriate color contrasts.
 
 - **Incorporate Best Programming Practices for Maintainability and Scalability**
-Build the application using clean, modular code that is easy to maintain and scale as the user base grows.
-Implementation: Use a modular architecture to separate concerns and improve maintainability. Follow coding standards and best practices. Implement automated testing to ensure code quality. Use version control for source code management. Plan for scalability by designing the system to handle increased load, possibly using cloud infrastructure and load balancing.
+The objective is to build the application using clean, modular code that is easy to maintain and scale as the user base grows. To achieve this, the implementation will involve using a modular architecture to separate concerns and improve maintainability. Coding standards and best practices will be followed. Automated testing will be implemented to ensure code quality. Version control will be used for source code management. The system will be designed for scalability to handle increased load, possibly using cloud infrastructure and load balancing.
 
 ## Requirements
 
 ### Functional Requirements
 
--**User Input** 
-The application must accept user input for the tonic note and scale type: Users should be able to enter a tonic note (e.g., C, G#, Bb) and select a scale type (e.g., major or minor).
+-**Enable Quick and Intuitive Access to Musical Terms and Structures for Users** 
+The objective is to provide a user-friendly interface that allows users to quickly search for and access musical scales and chords. To achieve this, the application must accept user input for the tonic note and scale type. Users should be able to enter a tonic note (e.g., C, G#, Bb) and select a scale type (e.g., major or minor). This input will serve as the foundation for generating scales and chords, ensuring quick retrieval and display of information, enhancing the user experience by making it easy to find and utilize musical resources.
 
 -**Scale Generation**
-The application must generate modal scales from the input tonic note and scale type: Generate the seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian) for each input scale.
+The objective is to generate detailed musical outputs based on user input. To achieve this, the application must generate modal scales from the input tonic note and scale type, including the seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian). 
 
 -**Chord Generation**
 The application must generate basic triads, seventh chords, and extended chords based on the input scale and its modes: Include major, minor, diminished, and augmented triads; major 7th, minor 7th, dominant 7th, half-diminished 7th, fully diminished 7th, and extended chords (9th, 11th, 13th).
 
--**I Ching Integration**
-The application must map generated chords and modes to I Ching trigrams and provide associated emotional and harmonic attributes: Integrate binary representations of I Ching trigrams and hexagrams to enhance the harmonic depth.
+-**I Ching Integration with binry concept**
+The objective is to integrate the I Ching trigrams to provide a unique perspective on harmonic and emotional mappings in music. To achieve this, the application must map the generated chords and modes to I Ching trigrams and provide associated emotional and harmonic attributes by integrating binary representations of I Ching trigrams and hexagrams. This involves converting musical elements into binary forms that correspond to the I Ching symbols, enhancing the harmonic depth and offering users a distinctive approach to musical composition.
 
 -**Display Results**
-The application must display the generated scales, modes, chords, and I Ching mappings in a readable format: Present the results in an organized manner that is easy to understand and navigate.
+The objective is to ensure results are presented in a user-friendly format. To achieve this, the application must display the generated scales, modes, chords, and I Ching mappings in a readable format, presented in an organized manner that is easy to understand and navigate, ensuring users can quickly grasp the information and use it effectively.
 
 -**Export Results**
-The application must allow users to export the results to a text file: Provide an option for users to save the generated scales, chords, and I Ching mappings for future reference.
+The objective is to allow users to save their musical explorations. To achieve this, the application must allow users to export the results to a text file, providing an option to save the generated scales, chords, and I Ching mappings for future reference.
 
 -**Database Management**
-The application must include CRUD operations for managing the database of musical terms: Admin interface or API endpoints for adding, updating, deleting, and retrieving terms from the database.
+The objective is to ensure the database of musical terms can be easily expanded and updated without significant rework or downtime. To achieve this, the application must organize the database of musical terms into categories based on types (scales, chords, etc.). Additionally, a user interface will be created where users can select a category to view the relevant terms, facilitating easy expansion and updates.
 
--**Automated Analysis**
-The application must analyze and organize new musical terms provided by users: Use NLP and rule-based systems to parse, categorize, and tag new terms automatically.
+-**Provide Specialty-Specific Term Lists**
+The objective is to offer curated lists of musical scales and chords specific to different categories (e.g., major scales, minor chords). To achieve this, the application must include CRUD (Create, Read, Update, Delete) operations for managing the database of musical terms. An admin interface or API endpoints should be provided for adding, updating, deleting, and retrieving terms from the database, ensuring the data remains current and accurate, and allowing users to select a category to view the relevant terms.
+
+-**Leverage Generative AI to Create Harmonic Progressions from Possible Scale and Chord Combinations**
+The objective is to use generative AI to automatically generate musically appealing harmonic progressions from the possible scales and chords provided by the user. To achieve this, the application must analyze and organize new musical terms provided by users and use generative AI to create harmonic progressions from the provided scales and chords. It should use natural language processing (NLP) and rule-based systems to parse, categorize, and tag new terms automatically, and leverage advanced machine learning models, such as GPT-3, to analyze input musical parameters and produce complex harmonic combinations.
 
 -**User-Friendly Interface**
-The application must be intuitive and accessible to all users: Follow UX design principles, ensure compliance with accessibility standards, and conduct user testing to gather feedback.
+The objective is to design the application to be intuitive and accessible to all users, including those with disabilities. To achieve this, the application must be intuitive and accessible, following UX design principles and ensuring compliance with accessibility standards. User testing will be conducted to gather feedback, and features like screen reader compatibility, keyboard navigation, and appropriate color contrasts will be incorporated to make the application accessible to users with disabilities.
 
 ### Non-Functional Requirements
 
