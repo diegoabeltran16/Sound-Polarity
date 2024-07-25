@@ -93,7 +93,7 @@ Python: Is chosen for its simplicity, readability, and rich ecosystem of librari
 -**Version Control**
 GitHub and GitLab for hosting the Git repository, facilitating collaboration, issue tracking, and continuous integration.
 
-### **Libraries and Frameworks**
+### Libraries and Frameworks
 
 -**Music Theory and Generation**
 - **music21:** A comprehensive library for computational music theory, musicology, and generation.
@@ -121,7 +121,7 @@ GitHub and GitLab for hosting the Git repository, facilitating collaboration, is
 - **OpenAI API:** For leveraging Large Language Models (LLMs) for NLP tasks and intelligent suggestions.
 - **AWS/Azure/GCP:** For cloud services, including hosting, storage, and additional computational resources.
 
-### **Testing and Quality Assurance**
+### Testing and Quality Assurance
 
 -**Automated Testing**
 - **unittest:** Python’s built-in library for unit testing.
@@ -183,7 +183,7 @@ Write automated tests to ensure the reliability and correctness of the code.
 - Aim for high test coverage, especially for critical components.
 - Use GitHub Actions to run tests automatically on each push and pull request.
 
-### **Project Management Best Practices**
+### Project Management Best Practices
 
 -**Agile Development**
 Use Agile methodologies to manage the project.
@@ -205,7 +205,7 @@ Gather and incorporate user feedback throughout the development process.
 - Use surveys and feedback forms.
 - Iterate on the design based on user feedback.
 
-### **Security Best Practices**
+### Security Best Practices
 
 -**Authentication and Authorization**
 Implement robust authentication and authorization mechanisms to secure user data.
@@ -225,7 +225,7 @@ Conduct regular security audits to identify and mitigate vulnerabilities.
 - Use automated security scanning tools.
 - Perform manual code reviews focused on security.
 
-### **Performance Best Practices**
+### Performance Best Practices
 
 -**Optimization**
 Optimize algorithms and data structures to ensure fast response times.
@@ -264,7 +264,7 @@ Maintain a consistent user interface and experience throughout the application.
 - Use a design system or component library.
 - Ensure consistency in visual design, terminology, and interactions.
 
-### **Deployment Best Practices**
+### Deployment Best Practices
 
 -**Containerization**
 Use containers to ensure consistent environments across development, testing, and production.
@@ -772,25 +772,76 @@ Sound-Polarity/
 
 ## Branches for Each Cycle
 
-- **Cycle 1: Basic Features**
--feature/scale-generation
--feature/chord-generation
+**Cycle 1: Basic Features**
 
+- **feature/scale-generation**
+**Objectives**
+  - Implement user input for tonic note and scale type.
+  - Develop functions to generate musical scales (major and minor).
+  - Create a utility to define patterns for different scales.
+  - Ensure the function returns a list of notes in the generated scale.
+  - Write tests to validate scale generation.
 
-- **Cycle 2: Advanced Features and I Ching Integration**
--feature/seventh-chords
--feature/extended-chords
--feature/iching-integration
+- **feature/chord-generation**
+**Objectives** 
+  - Extend scale generation to include all seven modes.
+  - Implement functions to generate basic chords (triads) from scales.
+  - Define intervals for different chord types (major, minor, diminished, augmented).
+  - Enhance the user interface to display generated scales and chords.
+  - Write tests to validate chord generation.
 
+**Cycle 2: Advanced Features and I Ching Integration**
+**feature/seventh-chords and /extended-chords**
+**Objectives** 
+  - Implement functions to generate seventh chords.
+  - Develop extended chord functions (e.g., ninths, elevenths).
+  - Enhance the user interface to support and display extended chords.
+  - Add functionality to export generated scales and chords to a file.
+  - Write tests to validate seventh and extended chord generation.
 
-- **Cycle 3: Generative AI and Harmonic Progressions**
--feature/generative-ai
--feature/ai-progressions
+**feature/iching-integration**
+**Objectives**
+  - Implement binary mapping to I Ching trigrams.
+  - Develop functions for converting chords and scales to binary representations.
+  - Enhance the user interface to display I Ching mappings.
+  - Conduct user testing to gather feedback on I Ching integration.
+  - Write tests to validate I Ching mapping functionality.
 
+**Cycle 3: Generative AI and Harmonic Progressions**
+**feature/generative-ai**
+**Objectives**
+  - Set up the OpenAI API for generative AI integration.
+  - Implement functions to generate harmonic progressions using AI.
+  - Enhance the user interface to include options for AI-generated content.
+  - Conduct initial user testing on AI-generated harmonic progressions.
+  - Write tests to validate AI integration and generated content.
+    
+**feature/ai-progressions**
+**Objectives**
+  - Refine AI-generated harmonic progressions based on user feedback.
+  - Implement functionality to save and load generated progressions.
+  - Conduct extensive user testing to refine and improve AI features.
+  - Optimize performance and usability of AI-generated content.
+  - Write tests to validate saving/loading functionality and performance.
 
-- **Cycle 4: Comprehensive Testing and Finalization**
--feature/comprehensive-testing
--feature/finalization
+**Cycle 4: Comprehensive Testing and Finalization**
+**feature/comprehensive-testing**
+**Objectives**
+  - Conduct thorough testing of all features developed in previous cycles.
+  - Ensure cross-platform compatibility of the application.
+  - Optimize code performance and refactor where necessary.
+  - Prepare comprehensive documentation for the project.
+  - Write tests to validate cross-platform compatibility and code performance.
+    
+**feature/finalization**
+**Objectives**
+  - Finalize the user interface and user experience design.
+  - Implement robust security measures to protect user data.
+  - Conduct final user acceptance testing to ensure all features meet requirements.
+  - Prepare for deployment, including packaging and distribution.
+  - Deploy the application and set up monitoring for post-deployment issues.
+  - Write final tests to validate the overall application stability and security.
+
 
 ## Flowchart
 
