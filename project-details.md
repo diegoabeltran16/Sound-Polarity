@@ -290,7 +290,7 @@ The architecture of the Sound-Polarity project is designed to be modular and sca
 - **Database:** Stores musical terms, user data, and generated results.
 - **Third-Party Services:** Includes external APIs for NLP and LLM functionalities.
 
-### **Components**
+### Components
 
 -**User Interface (UI)**
 - **Input Form:** For entering the tonic note and scale type.
@@ -645,7 +645,7 @@ This page allows administrators to manage the database of musical terms.
 
 ```
 
-## **Plan for development**
+## Plan for development
 Develop the Sound-Polarity project using a transformative approach inspired by the Yin-Yang concept, we will be structuring the development in cycles of pre-co-requisite programming blocks, moving from the simplest to the most complex. 
 Here’s a structured development plan divided into Alpha and Beta prototypes, each building upon the previous cycle
 
@@ -730,100 +730,67 @@ Comprehensive testing, optimization, finalization, and deployment.
 
 ```
 Sound-Polarity/
-├── cycle_1_foundation/
-│   ├── alpha_1_1/
-│   │   ├── main.py
-│   │   ├── scale_generator.py
-│   │   ├── ui/
-│   │   │   ├── input_form.py
-│   │   │   └── display_scales.py
-│   │   ├── tests/
-│   │   │   └── test_scale_generator.py
-│   │   └── requirements.txt
-│   └── beta_1_2/
-│       ├── main.py
-│       ├── scale_generator.py
-│       ├── chord_generator.py
-│       ├── ui/
-│       │   ├── input_form.py
-│       │   └── display_results.py
-│       ├── tests/
-│       │   └── test_chord_generator.py
-│       └── requirements.txt
-├── cycle_2_advanced/
-│   ├── alpha_2_1/
-│   │   ├── main.py
-│   │   ├── scale_generator.py
-│   │   ├── chord_generator.py
-│   │   ├── extended_chords.py
-│   │   ├── ui/
-│   │   │   └── display_extended_chords.py
-│   │   ├── export_results.py
-│   │   ├── tests/
-│   │   │   └── test_extended_chords.py
-│   │   └── requirements.txt
-│   └── beta_2_2/
-│       ├── main.py
-│       ├── scale_generator.py
-│       ├── chord_generator.py
-│       ├── extended_chords.py
-│       ├── i_ching_integration.py
-│       ├── ui/
-│       │   └── display_i_ching.py
-│       ├── export_results.py
-│       ├── tests/
-│       │   └── test_i_ching_integration.py
-│       └── requirements.txt
-├── cycle_3_ai/
-│   ├── alpha_3_1/
-│   │   ├── main.py
-│   │   ├── ai_integration.py
-│   │   ├── ui/
-│   │   │   └── display_ai_progressions.py
-│   │   ├── tests/
-│   │   │   └── test_ai_integration.py
-│   │   └── requirements.txt
-│   └── beta_3_2/
-│       ├── main.py
-│       ├── ai_integration.py
-│       ├── ui/
-│       │   └── display_advanced_ai.py
-│       ├── tests/
-│       │   └── test_advanced_ai.py
-│       └── requirements.txt
-├── cycle_4_final/
-│   ├── alpha_4_1/
-│   │   ├── main.py
-│   │   ├── full_integration.py
-│   │   ├── ui/
-│   │   │   └── final_ui.py
-│   │   ├── tests/
-│   │   │   └── test_full_integration.py
-│   │   └── requirements.txt
-│   └── beta_4_2/
-│       ├── main.py
-│       ├── full_integration.py
-│       ├── ui/
-│       │   └── final_ui.py
-│       ├── tests/
-│       │   └── test_final.py
-│       └── requirements.txt
+├── src/
+│   ├── __init__.py
+│   ├── scale_generation/
+│   │   ├── __init__.py
+│   │   ├── generate_scale.py
+│   │   └── scale_patterns.py
+│   ├── chord_generation/
+│   │   ├── __init__.py
+│   │   ├── generate_chord.py
+│   │   └── chord_intervals.py
+│   ├── iching_mapping/
+│   │   ├── __init__.py
+│   │   ├── iching_mapping.py
+│   │   └── binary_conversion.py
+│   ├── ai_integration/
+│   │   ├── __init__.py
+│   │   ├── generative_ai.py
+│   │   └── ai_harmonics.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── data_helpers.py
+│       └── logger.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_scale_generation.py
+│   ├── test_chord_generation.py
+│   ├── test_iching_mapping.py
+│   └── test_ai_integration.py
 ├── docs/
-│   ├── README.md
-│   ├── user_guide.md
-│   ├── developer_guide.md
-│   └── CHANGELOG.md
-└── LICENSE
+│   ├── scale_generation.md
+│   ├── chord_generation.md
+│   ├── iching_integration.md
+│   └── ai_integration.md
+├── .gitignore
+├── README.md
+└── setup.py
+
 
 ```
 
-- **Cycle Folders (cycle_1_foundation, cycle_2_advanced, etc.):** Each cycle contains its own set of subfolders for alpha and beta prototypes. This allows you to work on and test features incrementally.
-- **Alpha and Beta Prototypes (alpha_1_1, beta_1_2, etc.):** Separate folders for each prototype stage within a cycle. This keeps versions distinct and helps track progress.
-- **Modules (main.py, scale_generator.py, etc.):** Core functionality files, organized by feature (scale generation, chord generation, AI integration, etc.).
-- **User Interface (ui/):** All UI-related code, ensuring a clean separation from the core logic.
-- **Tests (tests/):** Unit tests for each module, ensuring code reliability and facilitating testing at each stage.
-- **Documentation (docs/):** Comprehensive project documentation, including README, user guide, developer guide, and changelog.
-- **Requirements (requirements.txt):** Dependencies for each prototype stage, ensuring a consistent development environment.
+## Branches for Each Cycle
+
+- **Cycle 1: Basic Features**
+-feature/scale-generation
+-feature/chord-generation
+
+
+- **Cycle 2: Advanced Features and I Ching Integration**
+-feature/seventh-chords
+-feature/extended-chords
+-feature/iching-integration
+
+
+- **Cycle 3: Generative AI and Harmonic Progressions**
+-feature/generative-ai
+-feature/ai-progressions
+
+
+- **Cycle 4: Comprehensive Testing and Finalization**
+-feature/comprehensive-testing
+-feature/finalization
 
 ## Flowchart
 
