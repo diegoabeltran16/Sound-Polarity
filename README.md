@@ -1,17 +1,38 @@
-# Sound-Polarity
-A tool for music composition
+# Sound-Polarity - A tool for music composition
 
+## Description
+This project aims to develop a Python-based application that generates musical scales and chords based on user input and integrates the I Ching trigrams for enhanced emotional and harmonic depth. By leveraging advanced musical theory and the principles of the I Ching, the application will provide a comprehensive tool for exploring and creating complex musical compositions. The approach will involve iterative prototyping to validate concepts and ensure a robust, user-friendly, and scalable solution
 
-## Getting started
+### Scope
+The project encompasses the design and implementation of a comprehensive musical theory application that allows users to input musical parameters and receive detailed outputs of scales, modes, and chords. The application will include features such as automated analysis of user-submitted terms, database management, and user-friendly interface design. Additionally, the application will integrate the I Ching trigrams to provide a unique perspective on harmonic and emotional mappings in music.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Specific Objectives
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- **Enable Quick and Intuitive Access to Musical Terms and Structures for Users**
+Provide a user-friendly interface that allows users to quickly search for and access musical scales and chords.
+Implementation: Develop a search functionality within the application where users can type in a term, and the application will return relevant musical terms and structures from the database.
 
-## Add your files
+- **Provide Specialty-Specific Term Lists**
+Offer curated lists of musical scales and chords specific to different categories (e.g., major scales, minor chords).
+Implementation: Organize the database of musical terms into categories based on types (scales, chords, etc.). Create a user interface where users can select a category to view the relevant terms.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- **Allow for Easy Expansion and Updates to the Database**
+Ensure the database of musical terms can be easily expanded and updated without significant rework or downtime.
+Implementation: Set up a relational database with CRUD (Create, Read, Update, Delete) operations. Provide an admin interface or API endpoints to facilitate updates and maintain data integrity and consistency.
+
+- **Automatically Analyze and Organize New Information Provided by Users**
+Implement functionality to accept, analyze, and organize new musical terms submitted by users.
+Implementation: Use natural language processing (NLP) and rule-based systems to parse and understand new terms provided by users. Automatically categorize and tag new terms and update the database accordingly.
+
+- **Ensure the Bot is User-Friendly and Accessible**
+Design the application to be intuitive and accessible to all users, including those with disabilities.
+Implementation: Follow UX design principles to create an intuitive interface. Conduct user testing to gather feedback and make improvements. Ensure compliance with accessibility standards by incorporating features like screen reader compatibility, keyboard navigation, and appropriate color contrasts.
+
+- **Incorporate Best Programming Practices for Maintainability and Scalability**
+Build the application using clean, modular code that is easy to maintain and scale as the user base grows.
+Implementation: Use a modular architecture to separate concerns and improve maintainability. Follow coding standards and best practices. Implement automated testing to ensure code quality. Use version control for source code management. Plan for scalability by designing the system to handle increased load, possibly using cloud infrastructure and load balancing.
+
+------------------------------------------------------------------------------------------------
 
 ```
 cd existing_repo
@@ -20,37 +41,6 @@ git branch -M main
 git push -uf origin main
 ```
 
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/music9771528/sound-polarity/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
 Choose a self-explaining name for your project.
